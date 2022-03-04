@@ -1,0 +1,202 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #e9ecf4;
+  color: #000;
+  font-family: arial, sans-serif;
+}
+h1 {
+  font-family: "Bree Serif", serif;
+  /* font-family: 'Merriweather', serif;
+  font-size: 2rem; */
+}
+h2 {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 100;
+}
+/* imagen flotante de contacto */
+.imgContacto {
+  position: fixed;
+  top: 90%;
+  left: 90%;
+  width: 60px;
+}
+.contenedor {
+  background: #fff;
+  padding: 20px;
+  margin: 20px auto;
+  width: 90%;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, auto);
+  grid-template-areas:
+    "header header header"
+    "contenido contenido contenido"
+    "caja1 caja2 caja3"
+    "footer footer footer";
+}
+/* .headerBox {
+  background-color: #000;
+  border: 1px solid white;
+} */
+.header,
+.footer {
+  background-color: #2e2e2e;
+  color: beige;
+  /* padding: 10px; */
+  border-radius: 4px;
+}
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  grid-area: header;
+}
+.header img {
+  width: 150px;
+}
+.nombreslogan {
+  /* padding: 1rem; */
+  position: relative;
+  /* left: 12rem; */
+}
+.nombreslogan h1 {
+  font-size: 4rem;
+}
+.nombreslogan h2 {
+  font-size: 2rem;
+  /* text-align: center; */
+}
+/* aqui los ajustes del menu */
+nav {
+  padding: 0.2rem;
+  background-color: #008e97;
+  background-image: linear-gradient(180deg, #2e2e2e 0%, #008e97 90%);
+
+  width: 100%;
+  /* margin: 3rem auto; */
+  /* border-radius: 20px; */
+  /* margin-bottom: 10px; */
+  grid-area: nav;
+}
+.menu {
+  list-style-type: none;
+  text-align: end;
+  /* padding: 1.2rem; */
+}
+.menu li {
+  display: inline-block;
+  position: relative;
+  font-size: 1.4rem;
+  margin: 5px 10px;
+  text-align: center;
+}
+.menu ul {
+  display: none;
+  position: absolute;
+}
+.menu ul li {
+  padding: auto;
+  font-size: 1rem;
+}
+.menu a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+.menu a:hover {
+  color: chartreuse;
+}
+
+/* ajustes del footer */
+.footer {
+  padding: 1rem;
+  margin: 5px;
+  margin-top: 1rem;
+  grid-area: footer;
+}
+.contenido {
+  padding: 20px;
+  border-radius: 4px;
+  line-height: 1.5;
+  grid-area: contenido;
+}
+.caja1,
+.caja2 {
+  padding: 20px;
+  border-radius: 4px;
+  background: #531068;
+  color: #fff;
+  height: 100px;
+  text-align: center;
+}
+.caja1 {
+  grid-area: caja1;
+}
+.caja2 {
+  grid-area: caja2;
+}
+
+/* Aqui iran los @medias */
+/* pantallas pequeñas 480px */
+@media screen and (max-width: 565px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+    /* width:auto; */
+  }
+  .header img {
+    margin: 1px;
+    /* width: 100px; */
+  }
+  .header h1 {
+    display: none;
+  }
+  .header h2 {
+    font-size: 1rem;
+  }
+  nav {
+    /* esto lo dejo para cuando sepamos como poner el menu */
+    /* display: none; */
+  }
+  .menu li {
+    display: block;
+    font-size: 0.8rem;
+  }
+  .imgContacto {
+    left: 80%;
+  }
+}
+/* pantallas medianas tablets 768px */
+@media screen and (max-width: 770px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+  }
+  .header img {
+    margin: 1px;
+    /* width: 100px; */
+  }
+  .header h1 {
+    display: none;
+  }
+  .header h2 {
+    /* font-size: 1.5rem; */
+  }
+  nav {
+    /* esto lo dejo para cuando sepamos como poner el menu */
+    /* display: none; */
+  }
+}
+/* pantallas mayores a 770px */
+@media screen and (min-width: 770px) {
+
+.menu li:hover ul {
+  display: block;
+  background-color: #008e97;
+}
+}

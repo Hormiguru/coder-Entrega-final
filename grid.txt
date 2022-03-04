@@ -1,0 +1,9 @@
+display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, auto);
+  grid-template-areas:
+    "logo header header"
+    "contenido contenido contenido"
+    "caja1 caja2 caja3"
+    "footer footer footer";
