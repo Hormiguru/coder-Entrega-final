@@ -48,7 +48,10 @@ h2 {
 .footer {
   background-color: #2e2e2e;
   color: beige;
-  /* padding: 10px; */
+  padding: 10px;Nombre:
+  Correo:
+  Area:
+  Codigo:
   border-radius: 4px;
 }
 .header {
@@ -140,7 +143,9 @@ nav {
 .caja2 {
   grid-area: caja2;
 }
-
+footer a {
+  color: white;
+}
 /* Aqui iran los @medias */
 /* pantallas pequeñas 480px */
 @media screen and (max-width: 565px) {
@@ -170,6 +175,9 @@ nav {
   .imgContacto {
     left: 80%;
   }
+  footer {
+    font-stretch: 50%;
+  }
 }
 /* pantallas medianas tablets 768px */
 @media screen and (max-width: 770px) {
@@ -194,9 +202,8 @@ nav {
 }
 /* pantallas mayores a 770px */
 @media screen and (min-width: 770px) {
-
-.menu li:hover ul {
-  display: block;
-  background-color: #008e97;
-}
+  .menu li:hover ul {
+    display: block;
+    background-color: #008e97;
+  }
 }
