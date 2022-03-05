@@ -33,13 +33,13 @@ h2 {
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(4, auto);
+  grid-template-rows: repeat(3, auto);
   grid-template-areas:
     "header header header"
     "contenido contenido contenido"
-    "caja1 caja2 caja3"
     "footer footer footer";
 }
+
 /* .headerBox {
   background-color: #000;
   border: 1px solid white;
@@ -48,10 +48,7 @@ h2 {
 .footer {
   background-color: #2e2e2e;
   color: beige;
-  padding: 10px;Nombre:
-  Correo:
-  Area:
-  Codigo:
+  /* padding: 10px; */
   border-radius: 4px;
 }
 .header {
@@ -123,10 +120,70 @@ nav {
   grid-area: footer;
 }
 .contenido {
+  /* background-color: #008e97; */
   padding: 20px;
   border-radius: 4px;
   line-height: 1.5;
   grid-area: contenido;
+}
+.home {
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas:
+    "bienvenida bienvenida bienvenida"
+    "foto1 foto2 foto3"
+    "caja1 caja2 caja2";
+}
+.contacto {
+  display: grid;
+  /* align-items: center; */
+  gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, auto);
+  grid-template-areas:
+    "bienvenida bienvenida bienvenida"
+    "formulario formulario mapa"
+    "formulario formulario mapa"
+    "formulario formulario direccion";
+}
+.bienvenida {
+  text-align: center;
+  grid-area: bienvenida;
+}
+.foto1 {
+  grid-area: foto1;
+}
+.foto2 {
+  grid-area: foto2;
+}
+.foto3 {
+  grid-area: foto3;
+}
+.formulario {
+  /* width: 350px; */
+  grid-area: formulario;
+}
+.formulario fieldset {
+  width: 450px;
+  height: 400px;
+}
+.preguntaForm {
+  background-color: rgb(206, 22, 22);
+  margin: 2px;
+}
+.gmap {
+  width: 600px;
+}
+.mapa {
+  width: 600px;
+  grid-area: mapa;
+}
+.direccion {
+  text-align: center;
+  width: 600px;
+  grid-area: direccion;
 }
 .caja1,
 .caja2 {
@@ -135,6 +192,7 @@ nav {
   background: #531068;
   color: #fff;
   height: 100px;
+  /* width: 100px; */
   text-align: center;
 }
 .caja1 {
@@ -164,10 +222,10 @@ footer a {
   .header h2 {
     font-size: 1rem;
   }
-  nav {
-    /* esto lo dejo para cuando sepamos como poner el menu */
-    /* display: none; */
-  }
+  /* nav {
+    esto lo dejo para cuando sepamos como poner el menu
+    display: none;
+  } */
   .menu li {
     display: block;
     font-size: 0.8rem;
@@ -175,6 +233,26 @@ footer a {
   .imgContacto {
     left: 80%;
   }
+  .contacto {
+    grid-template-areas:
+      "bienvenida bienvenida bienvenida"
+      "formulario formulario formulario"
+      "direccion direccion direccion"
+      "mapa mapa mapa";
+  }
+  .gmap {
+    width: 250px;
+    height: 200px;
+  }
+  .mapa {
+    grid-area: mapa;
+  }
+  .direccion {
+    text-align: center;
+    width: 250px;
+    grid-area: direccion;
+  }
+
   footer {
     font-stretch: 50%;
   }
@@ -192,13 +270,17 @@ footer a {
   .header h1 {
     display: none;
   }
-  .header h2 {
-    /* font-size: 1.5rem; */
+  .contacto {
+    grid-template-areas:
+      "bienvenida bienvenida bienvenida"
+      "formulario formulario formulario"
+      "direccion direccion direccion"
+      "mapa mapa mapa";
   }
-  nav {
-    /* esto lo dejo para cuando sepamos como poner el menu */
-    /* display: none; */
-  }
+  /* nav {
+    esto lo dejo para cuando sepamos como poner el menu
+    display: none;
+  } */
 }
 /* pantallas mayores a 770px */
 @media screen and (min-width: 770px) {
