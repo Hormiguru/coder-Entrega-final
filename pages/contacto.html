@@ -70,34 +70,23 @@
           </p>
         </div>
         <div class="formulario">
-          <form action="">
-            <fieldset>
-              <!-- <legend>Formulario de contacto</legend> -->
-              <div class="preguntaForm nombre">
-                <label for="nombre">Nombre</label>
-                <input type="text" name="nombre" />
-              </div>
-              <div class="preguntaForm apellido">
-                <label for="apellido">Apellido</label>
-                <input type="text" name="apellido" />
-              </div>
-              <div class="preguntaForm email">
-                <label for="mail">Escribe tu mail</label>
-                <input type="email" name="mail" />
-              </div>
-              <div class="preguntaForm pass">
-                <label for="pass">Pon tu password</label>
-                <input type="password" name="pass" />
-              </div>
-              <div class="preguntaForm checkbox">
-                <label for="terminos">Acepto los terminos y condiciones</label>
-                <input type="checkbox" name="terminos" />
-              </div>
-              <div>
-                <input type="submit" value="Enviar" />
-                <input type="reset" value="Borrar" />
-              </div>
-            </fieldset>
+          <form action="" class="contact">
+            <label for="nombre">Nombre:</label>
+            <input type="text" name="nombre" id="nombre" />
+
+            <label for="apellido">Apellido:</label>
+            <input type="text" name="apellido" id="apellido" />
+
+            <label for="correo">Correo:</label>
+            <input type="email" name="correo" id="correo" />
+
+            <label for="telefono">Telefono:</label>
+            <input type="tel" name="telefono" id="telefono" />
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea name="mensaje" id="mensaje" cols="30" rows="2"></textarea>
+
+            <input type="submit" value="Enviar" />
           </form>
         </div>
         <div class="direccion">
