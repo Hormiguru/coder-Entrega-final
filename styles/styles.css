@@ -24,6 +24,7 @@ h2 {
   top: 90%;
   left: 90%;
   width: 60px;
+  z-index: 1;
 }
 .contenedor {
   background: #fff;
@@ -134,7 +135,8 @@ nav {
   grid-template-rows: repeat(3, auto);
   grid-template-areas:
     "bienvenida bienvenida bienvenida"
-    "salon-fama salon-fama salon-fama";
+    "salon-fama salon-fama salon-fama"
+    "segunda segunda segunda ";
 }
 
 .contacto {
@@ -149,8 +151,22 @@ nav {
     "formulario formulario mapa"
     "formulario formulario direccion";
 }
+
+.nosotros {
+  display: grid;
+  /* align-items: center; */
+  gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas:
+    "bienvenida bienvenida bienvenida"
+    "card1 card2 card3"
+    "lema lema lema";
+}
+
 .bienvenida {
   text-align: center;
+  overflow: hidden;
   grid-area: bienvenida;
 }
 .salon-fama {
@@ -278,6 +294,108 @@ nav {
 .segunda,
 .tercera {
   margin-top: 2rem;
+  grid-area: segunda;
+}
+/* las tarjetas de nosotros */
+.cards {
+  width: 17rem;
+  /* margin: 10px; */
+  overflow: hidden;
+  position: relative;
+  border-radius: 15px;
+  box-shadow: 7px 13px 37px rgb(0, 0, 0, 0.6);
+}
+
+.cards .cardTop {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+}
+/* el efecto diagonal bajo la imagen */
+.cards .cardTop::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  border-top: 30px solid transparent;
+  border-left: 400px solid white;
+  bottom: 0;
+}
+
+.cards .cardTop img {
+  width: 100%;
+  height: 199px;
+}
+
+.cards .cardInfo {
+  padding: 10px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.cards .cardInfo h2 {
+  margin: 0.5em 0;
+}
+
+.cards .cardInfo p {
+  margin: 1em 0;
+}
+
+.cards ul li {
+  list-style: none;
+  display: inline-block;
+  margin: 0.5em 0.2em;
+}
+
+.cards ul li a {
+  text-decoration: none;
+  color: white;
+  background: #2e2e2e;
+  width: 30px;
+  height: 30px;
+  line-height: 30px !important;
+  /* esto lo hara circular ya que la altura y el ancho son iguales */
+  border-radius: 50%;
+  /* velocidad del efecto en redes */
+  transition: all 0.3s ease-in-out;
+}
+
+/* efecto de crecimiento a redes sociales */
+.cards ul li a:hover {
+  transform: scale(1.4);
+}
+
+.cards .cardBottom {
+  width: 100%;
+  height: 80px;
+  background: #222121;
+  position: relative;
+}
+
+/* el efecto diagonal encima del cardBottom */
+.cards .cardBottom::before {
+  content: "";
+  position: relative;
+  width: 100px;
+  border-bottom: 30px solid transparent;
+  border-right: 400px solid white;
+  top: -3px;
+}
+/* declaramos el grid-area que ocuparan las cards y el lema */
+.card1 {
+  grid-area: card1;
+}
+
+.card2 {
+  grid-area: card2;
+}
+
+.card3 {
+  grid-area: card3;
+}
+
+.lema {
+  grid-area: lema;
 }
 footer a {
   color: white;
@@ -330,6 +448,19 @@ footer a {
     width: 250px;
     grid-area: direccion;
   }
+  .nosotros {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      "bienvenida bienvenida bienvenida"
+      "card1 card1 card1"
+      "card2 card2 card2"
+      "card3 card3 card3"
+      "lema lema lema";
+  }
+
+  .cards {
+    transform: scale(0.1);
+  }
 
   footer {
     font-stretch: 50%;
@@ -355,7 +486,14 @@ footer a {
       "direccion direccion direccion"
       "mapa mapa mapa";
   }
-
+  .nosotros {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "bienvenida bienvenida"
+      "card1 card2 "
+      "card3 card4 "
+      "lema lema";
+  }
   .direccion {
     padding: 2rem;
     text-align: center;
