@@ -133,9 +133,9 @@ nav {
   grid-template-rows: repeat(3, auto);
   grid-template-areas:
     "bienvenida bienvenida bienvenida"
-    "foto1 foto2 foto3"
-    "caja1 caja2 caja2";
+    "salon-fama salon-fama salon-fama";
 }
+
 .contacto {
   display: grid;
   /* align-items: center; */
@@ -152,14 +152,53 @@ nav {
   text-align: center;
   grid-area: bienvenida;
 }
-.foto1 {
-  grid-area: foto1;
+.salon-fama {
+  border: 2px solid black;
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: center; */
+  justify-content: space-around;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  gap: 0.8rem;
+  grid-area: salon-fama;
 }
-.foto2 {
-  grid-area: foto2;
+.salon-fama img {
+  width: 100px;
+  height: 100px;
 }
-.foto3 {
-  grid-area: foto3;
+.top10productos {
+  /* border: 2px solid rgb(216, 34, 34); */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  /* flex-wrap: wrap; */
+  /* background-color: #000; */
+  margin: 0.5rem;
+}
+/* Datos del producto, primero los settings del cajon */
+.data-producto {
+  width: 14rem;
+  font-size: 14px;
+  overflow: hidden;
+}
+
+.data-producto h2 {
+  font-weight: bold;
+  color: forestgreen;
+}
+
+/* .data-producto .sku {
+  font-size: 10px;
+} */
+
+.data-producto span {
+  color: forestgreen;
+  font-weight: bold;
+}
+.data-producto .precio {
+  font-size: 16px;
 }
 .formulario {
   background-color: #ffffff;
