@@ -15,7 +15,7 @@ h1 {
 }
 h2 {
   font-family: "Josefin Sans", sans-serif;
-  font-size: 1.2rem;
+  /* font-size: 1.2rem; */
   font-weight: 100;
 }
 /* imagen flotante de contacto */
@@ -238,6 +238,7 @@ nav {
 
 .contact label {
   font-weight: 700px;
+  text-align: left;
 }
 
 .contact input:not([type="submit"]),
@@ -274,21 +275,12 @@ nav {
   width: 600px;
   grid-area: direccion;
 }
-.caja1,
-.caja2 {
-  padding: 20px;
-  border-radius: 4px;
-  background: #531068;
-  color: #fff;
-  height: 100px;
-  /* width: 100px; */
-  text-align: center;
-}
-.caja1 {
-  grid-area: caja1;
-}
-.caja2 {
-  grid-area: caja2;
+.pregunta {
+  /* background-color: #000; */
+  /* border: 2px solid fuchsia; */
+  /* color: whitesmoke; */
+  text-align: left;
+  margin: 20px;
 }
 
 .segunda,
@@ -437,6 +429,7 @@ footer a {
       "direccion direccion direccion"
       "mapa mapa mapa";
   }
+
   .gmap {
     width: 250px;
     height: 200px;
@@ -457,11 +450,15 @@ footer a {
       "card3 card3 card3"
       "lema lema lema";
   }
-
   .cards {
     transform: scale(0.5);
   }
-
+  .faq h3 {
+    font-stretch: 50%;
+  }
+  .pregunta {
+    font-stretch: 20%;
+  }
   footer {
     font-stretch: 50%;
   }
