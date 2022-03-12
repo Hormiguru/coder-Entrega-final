@@ -170,7 +170,7 @@ nav {
   grid-area: bienvenida;
 }
 .salon-fama {
-  border: 2px solid black;
+  /* border: 2px solid black; */
   display: flex;
   flex-wrap: wrap;
   /* justify-content: center; */
@@ -178,8 +178,12 @@ nav {
   grid-area: salon-fama;
 }
 
-.salon-fama img {
+.productos img {
   width: 100px;
+  /* height: 100px; */
+}
+.categorias img {
+  width: 50px;
   /* height: 100px; */
 }
 
@@ -192,6 +196,17 @@ nav {
   /* flex-wrap: wrap; */
   /* background-color: #000; */
   margin: 0.5rem;
+}
+.top10categorias {
+  border: 5px solid skyblue;
+  border-top-right-radius: 13px;
+  border-bottom-right-radius: 13px;
+  display: flex;
+  align-items: center;
+  margin: 5px;
+}
+.top10categorias h4 {
+  margin: 10px;
 }
 /* Datos del producto, primero los settings del cajon */
 .data-producto {
@@ -206,8 +221,8 @@ nav {
 }
 
 /* .data-producto .sku {
-  font-size: 10px;
-} */
+    font-size: 10px;
+  } */
 
 .data-producto span {
   color: forestgreen;
@@ -394,73 +409,11 @@ footer a {
 }
 
 /* Aqui iran los @medias */
-/* pantallas pequeñas 480px */
-@media screen and (max-width: 565px) {
-  .header {
-    flex-direction: column;
-    align-items: center;
-    /* width:auto; */
-  }
-  .header img {
-    margin: 1px;
-    /* width: 100px; */
-  }
-  .header h1 {
-    display: none;
-  }
-  .header h2 {
-    font-size: 1rem;
-  }
-  /* nav {
-    esto lo dejo para cuando sepamos como poner el menu
-    display: none;
-  } */
-  .menu li {
+/* pantallas mayores a 770px */
+@media screen and (min-width: 770px) {
+  .menu li:hover ul {
     display: block;
-    font-size: 0.8rem;
-  }
-  .imgContacto {
-    left: 80%;
-  }
-  .contacto {
-    grid-template-areas:
-      "bienvenida bienvenida bienvenida"
-      "formulario formulario formulario"
-      "direccion direccion direccion"
-      "mapa mapa mapa";
-  }
-
-  .gmap {
-    width: 250px;
-    height: 200px;
-  }
-
-  .direccion {
-    padding: 2rem;
-    text-align: center;
-    width: 250px;
-    grid-area: direccion;
-  }
-  .nosotros {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-areas:
-      "bienvenida bienvenida bienvenida"
-      "card1 card1 card1"
-      "card2 card2 card2"
-      "card3 card3 card3"
-      "lema lema lema";
-  }
-  .cards {
-    transform: scale(0.5);
-  }
-  .faq h3 {
-    font-stretch: 50%;
-  }
-  .pregunta {
-    font-stretch: 20%;
-  }
-  footer {
-    font-stretch: 50%;
+    background-color: #008e97;
   }
 }
 /* pantallas medianas tablets 768px */
@@ -497,15 +450,78 @@ footer a {
     grid-area: direccion;
   }
 
+  /* pantallas pequeñas 480px */
+  @media screen and (max-width: 565px) {
+    .header {
+      flex-direction: column;
+      align-items: center;
+      /* width:auto; */
+    }
+    .header img {
+      margin: 1px;
+      /* width: 100px; */
+    }
+    .header h1 {
+      display: none;
+    }
+    .header h2 {
+      font-size: 1rem;
+    }
+    /* nav {
+        esto lo dejo para cuando sepamos como poner el menu
+        display: none;
+      } */
+    .menu li {
+      display: block;
+      font-size: 0.8rem;
+    }
+    .imgContacto {
+      left: 80%;
+    }
+    .contacto {
+      grid-template-areas:
+        "bienvenida bienvenida bienvenida"
+        "formulario formulario formulario"
+        "direccion direccion direccion"
+        "mapa mapa mapa";
+    }
+
+    .gmap {
+      width: 250px;
+      height: 200px;
+    }
+
+    .direccion {
+      padding: 2rem;
+      text-align: center;
+      width: 250px;
+      grid-area: direccion;
+    }
+    .nosotros {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-areas:
+        "bienvenida bienvenida bienvenida"
+        "card1 card1 card1"
+        "card2 card2 card2"
+        "card3 card3 card3"
+        "lema lema lema";
+    }
+    .cards {
+      transform: scale(0.5);
+    }
+    .faq h3 {
+      font-stretch: 50%;
+    }
+    .pregunta {
+      font-stretch: 20%;
+    }
+    footer {
+      font-stretch: 50%;
+    }
+  }
+
   /* nav {
     esto lo dejo para cuando sepamos como poner el menu
     display: none;
   } */
-}
-/* pantallas mayores a 770px */
-@media screen and (min-width: 770px) {
-  .menu li:hover ul {
-    display: block;
-    background-color: #008e97;
-  }
 }
