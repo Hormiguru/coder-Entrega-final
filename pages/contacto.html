@@ -17,6 +17,10 @@
       href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <!-- Le ponemos el css de styles -->
     <link rel="stylesheet" href="../styles/styles.css" />
     <title>Papeleria Alfa 📚</title>
@@ -47,7 +51,7 @@
           <ul class="menu headerBox">
             <li><a href="../Index.html">Home</a></li>
             <li>
-              <a href=".productos.html">Productos</a>
+              <a href="./productos.html">Productos</a>
               <ul>
                 <li><a href="#">Producto1</a></li>
                 <li><a href="#">Producto2</a></li>
@@ -70,7 +74,9 @@
             quieres dejar un mensaje por favor llena el formulario
           </p>
         </div>
-        <div class="formulario">
+        <div
+          class="formulario animate__animated animate__bounceInLeft animate__delay-2s"
+        >
           <form action="" class="contact">
             <label for="nombre">Nombre:</label>
             <input type="text" name="nombre" id="nombre" />
@@ -91,12 +97,14 @@
           </form>
         </div>
         <div class="direccion">
-          <p>
+          <p class="wow animate__animated animate__zoomIn animate__delay-2s">
             Cerrada de Guillermo prieto #32,Col. Jesus del monte, Huixquilucan,
             Edo. de México, C.P.: 52764
           </p>
         </div>
-        <div class="mapa">
+        <div
+          class="mapa wow animate__animated animate__zoomIn animate__delay-2s"
+        >
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15055.484976574546!2d-99.29567800000001!3d19.374727!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d2072128fee91f%3A0x7ef074f48a3f76d!2sCda.%20de%20Guillermo%20Prieto%2C%20Jesus%20del%20Monte%2C%2052764%20M%C3%A9x.!5e0!3m2!1ses-419!2smx!4v1646423203892!5m2!1ses-419!2smx"
             width="300"
@@ -121,4 +129,8 @@
       </footer>
     </div>
   </body>
+  <script src="js/wow.min.js"></script>
+  <script>
+    new WOW().init();
+  </script>
 </html>
