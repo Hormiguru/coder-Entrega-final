@@ -117,6 +117,9 @@ h3 {
 }
 .menu a:hover {
   color: chartreuse;
+}*/
+.form-control:focus {
+  color: olivedrab;
 }
 
 /* ajustes del footer */
