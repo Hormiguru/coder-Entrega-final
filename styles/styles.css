@@ -79,17 +79,18 @@ h3 {
 }
 /* aqui los ajustes del menu */
 /* probando el navbar de bootstrap */
-/*nav {
+.navbar {
   padding: 0.2rem;
-  background-color: #008e97;
-  background-image: linear-gradient(180deg, #2e2e2e 0%, #008e97 90%);
-
   width: 100%;
-  margin: 3rem auto;          apagar
-  border-radius: 20px;        apagar
-  margin-bottom: 10px;        apagar
   grid-area: nav;
+  /* background-color: #008e97;
+  background-image: linear-gradient(180deg, #2e2e2e 0%, #008e97 90%); */
+
+  margin: 3px;
+  /* border-radius: 20px;        apagar */
+  /* margin-bottom: 10px;        apagar */
 }
+/*
 .menu {
   list-style-type: none;
   text-align: end;
