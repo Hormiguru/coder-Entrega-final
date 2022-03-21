@@ -130,6 +130,8 @@ main h2 {
 main h3 {
   font-size: 1.17em;
   margin-bottom: 2.5rem;
+  margin: 2px;
+  padding: 10px;
 }
 /* ajustes del footer */
 .footer {
@@ -344,7 +346,7 @@ main h3 {
   grid-area: tercera;
 }
 .cuarta {
-  background-color: #000;
+  /* background-color: #000; */
   margin-top: 2rem;
   z-index: 0;
   grid-area: cuarta;
