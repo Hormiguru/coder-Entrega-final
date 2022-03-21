@@ -26,6 +26,8 @@ h2 {
   top: 90%;
   left: 90%;
   width: 60px;
+  /* background-color: aliceblue; */
+  /* border: 2px solid black; */
   z-index: 1;
 }
 .contenedor {
@@ -148,9 +150,10 @@ main h3 {
   display: grid;
   gap: 0.5rem;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(4, auto);
+  grid-template-rows: repeat(5, auto);
   grid-template-areas:
     "bienvenida bienvenida bienvenida"
+    "cuarta cuarta cuarta"
     "tercera tercera tercera"
     "segunda segunda segunda "
     "salon-fama salon-fama salon-fama";
@@ -340,6 +343,17 @@ main h3 {
   margin-top: 2rem;
   grid-area: tercera;
 }
+.cuarta {
+  background-color: #000;
+  margin-top: 2rem;
+  z-index: 0;
+  grid-area: cuarta;
+}
+.carousel img {
+  max-height: 40vh;
+  /* min-width: auto; */
+}
+
 /* las tarjetas de nosotros */
 .cards {
   width: 17rem;
