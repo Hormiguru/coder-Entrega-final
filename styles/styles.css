@@ -19,9 +19,7 @@ h2 {
   font-weight: 100;
   font-size: 21px;
 }
-h3 {
-  font-size: 1.17em;
-}
+
 /* imagen flotante de contacto */
 .imgContacto {
   position: fixed;
@@ -90,11 +88,11 @@ h3 {
   /* border-radius: 20px;        apagar */
   /* margin-bottom: 10px;        apagar */
 }
-/*
+/* ajustes al .navbar menu */
 .menu {
   list-style-type: none;
   text-align: end;
-  padding: 1.2rem;           apagar
+  /* padding: 1.2rem;           apagar */
 }
 .menu li {
   display: inline-block;
@@ -117,11 +115,20 @@ h3 {
 }
 .menu a:hover {
   color: chartreuse;
-}*/
-.form-control:focus {
+}
+*/ .form-control:focus {
   color: olivedrab;
 }
 
+/* ajustes a main */
+main h2 {
+  font-size: 2.5rem;
+  margin-top: 0.5rem;
+}
+main h3 {
+  font-size: 1.17em;
+  margin-bottom: 2.5rem;
+}
 /* ajustes del footer */
 .footer {
   padding: 1rem;
@@ -141,11 +148,12 @@ h3 {
   display: grid;
   gap: 0.5rem;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, auto);
+  grid-template-rows: repeat(4, auto);
   grid-template-areas:
     "bienvenida bienvenida bienvenida"
-    "salon-fama salon-fama salon-fama"
-    "segunda segunda segunda ";
+    "tercera tercera tercera"
+    "segunda segunda segunda "
+    "salon-fama salon-fama salon-fama";
 }
 
 .contacto {
@@ -186,11 +194,27 @@ h3 {
   justify-content: space-around;
   grid-area: salon-fama;
 }
-
 .productos img {
   width: 100px;
-  /* height: 100px; */
 }
+.top10productos img {
+  transition: all 0.3s ease-in-out;
+}
+/* efecto de crecimiento  */
+.top10productos img:hover {
+  transform: scale(1.7);
+}
+.top10categorias {
+  transition: all 0.3s ease-in-out;
+  background-color: #fff;
+}
+/* efecto de crecimiento  */
+.top10categorias:hover {
+  background-color: #2e2e2e;
+  color: #fff;
+  transform: scale(1.4) translate(0, -50%);
+}
+
 .categorias img {
   width: 50px;
   /* height: 100px; */
@@ -227,7 +251,7 @@ h3 {
 .data-producto h2 {
   font-weight: bold;
   color: forestgreen;
-  /* font-size: 21px; */
+  font-size: 21px;
 }
 
 /* .data-producto .sku {
@@ -307,11 +331,14 @@ h3 {
   text-align: left;
   margin: 20px;
 }
-
-.segunda,
-.tercera {
+.segunda {
   margin-top: 2rem;
   grid-area: segunda;
+}
+
+.tercera {
+  margin-top: 2rem;
+  grid-area: tercera;
 }
 /* las tarjetas de nosotros */
 .cards {
@@ -322,17 +349,22 @@ h3 {
   border-radius: 15px;
   box-shadow: 7px 13px 37px rgb(0, 0, 0, 0.6);
 }
+.cards h2 {
+  font-size: 30px;
+}
 
 .cards .cardTop {
   width: 100%;
   height: 200px;
   overflow: hidden;
   position: relative;
+  background-color: #222121;
 }
 /* el efecto diagonal bajo la imagen */
 .cards .cardTop::before {
   content: "";
   position: absolute;
+  left: 0;
   width: 100px;
   border-top: 30px solid transparent;
   border-left: 400px solid white;
@@ -340,7 +372,7 @@ h3 {
 }
 
 .cards .cardTop img {
-  width: 100%;
+  /* width: 100%; */
   height: 199px;
 }
 
@@ -412,6 +444,8 @@ h3 {
 }
 
 .lema {
+  margin: 1rem;
+  padding: 0.5rem;
   grid-area: lema;
 }
 footer a {
@@ -481,6 +515,13 @@ footer a {
         esto lo dejo para cuando sepamos como poner el menu
         display: none;
       } */
+
+    main h2 {
+      font-size: 1.5rem;
+    }
+    main h3 {
+      font-size: 0.57em;
+    }
     .menu li {
       display: block;
       font-size: 0.8rem;
@@ -517,21 +558,21 @@ footer a {
         "lema lema lema";
     }
     .cards {
-      transform: scale(0.5);
-    }
-    .faq h3 {
-      font-stretch: 50%;
-    }
-    .pregunta {
-      font-stretch: 20%;
-    }
-    footer {
-      font-stretch: 50%;
+      transform: scale(0.8);
     }
   }
+  .lema {
+    font-size: 21px;
+  }
+  .pregunta {
+    font-stretch: 20%;
+  }
+  footer {
+    font-stretch: 50%;
+  }
+}
 
-  /* nav {
+/* nav {
     esto lo dejo para cuando sepamos como poner el menu
     display: none;
   } */
-}
