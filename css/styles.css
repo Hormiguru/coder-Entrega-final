@@ -1,10 +1,505 @@
+@charset "UTF-8";
 /* newStyles */
 /* Tipos de letra que ocuparemos */
 /* Reseteamos los margenes */
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-/*# sourceMappingURL=styles.css.map */
+  box-sizing: border-box; }
+
+body {
+  background: #e9ecf4;
+  color: #000;
+  font-family: arial, sans-serif; }
+
+h1 {
+  font-family: "Bree Serif", serif;
+  /* font-family: 'Merriweather', serif;
+  font-size: 2rem; */ }
+
+h2 {
+  font-family: "Josefin Sans", sans-serif;
+  /* font-size: 1.2rem; */
+  font-weight: 100;
+  font-size: 21px; }
+
+/* imagen flotante de contacto */
+.imgContacto {
+  position: fixed;
+  top: 90%;
+  left: 90%;
+  width: 60px;
+  /* background-color: aliceblue; */
+  /* border: 2px solid black; */
+  z-index: 1; }
+
+.contenedor {
+  background: #fff;
+  padding: 20px;
+  margin: 20px auto;
+  width: 90%;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas: "header header header" "contenido contenido contenido" "footer footer footer"; }
+
+/* .headerBox {
+  background-color: #000;
+  border: 1px solid white;
+} */
+.header,
+.footer {
+  background-color: #2e2e2e;
+  color: beige;
+  /* padding: 10px; */
+  border-radius: 4px; }
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  grid-area: header; }
+
+.header img {
+  width: 150px; }
+
+.nombreslogan {
+  /* padding: 1rem; */
+  position: relative;
+  /* left: 12rem; */ }
+
+.nombreslogan h1 {
+  font-size: 4rem; }
+
+.nombreslogan h2 {
+  font-size: 2rem;
+  /* text-align: center; */ }
+
+/* aqui los ajustes del menu */
+/* probando el navbar de bootstrap */
+.navbar {
+  padding: 0.2rem;
+  width: 100%;
+  margin: 3px;
+  grid-area: nav;
+  /* background-color: #008e97;
+  background-image: linear-gradient(180deg, #2e2e2e 0%, #008e97 90%); */
+  /* border-radius: 20px;        apagar */
+  /* margin-bottom: 10px;        apagar */ }
+
+/* ajustes al .navbar menu */
+.menu {
+  list-style-type: none;
+  text-align: end;
+  /* padding: 1.2rem;           apagar */ }
+
+.menu li {
+  display: inline-block;
+  position: relative;
+  font-size: 1.4rem;
+  margin: 5px 10px;
+  text-align: center; }
+
+.menu ul {
+  display: none;
+  position: absolute; }
+
+.menu ul li {
+  padding: auto;
+  font-size: 1rem; }
+
+.menu a {
+  color: white;
+  text-decoration: none; }
+
+.menu a:hover {
+  color: chartreuse; }
+
+/* ajustes a main */
+main h2 {
+  font-size: 2.5rem;
+  margin-top: 0.5rem; }
+
+main h3 {
+  font-size: 1.17em;
+  margin-bottom: 2.5rem;
+  margin: 2px;
+  padding: 10px; }
+
+/* ajustes del footer */
+.footer {
+  padding: 1rem;
+  margin: 5px;
+  margin-top: 1rem;
+  grid-area: footer; }
+
+.contenido {
+  /* background-color: #008e97; */
+  padding: 20px;
+  border-radius: 4px;
+  line-height: 1.5;
+  text-align: center;
+  grid-area: contenido; }
+
+.home {
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(5, auto);
+  grid-template-areas: "bienvenida bienvenida bienvenida" "cuarta cuarta cuarta" "tercera tercera tercera" "segunda segunda segunda " "salon-fama salon-fama salon-fama"; }
+
+.contacto {
+  display: grid;
+  /* align-items: center; */
+  gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, auto);
+  grid-template-areas: "bienvenida bienvenida bienvenida" "formulario formulario mapa" "formulario formulario mapa" "formulario formulario direccion"; }
+
+.nosotros {
+  display: grid;
+  /* align-items: center; */
+  gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas: "bienvenida bienvenida bienvenida" "card1 card2 card3" "lema lema lema"; }
+
+.bienvenida {
+  text-align: center;
+  overflow: hidden;
+  grid-area: bienvenida; }
+
+.salon-fama {
+  /* border: 2px solid black; */
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: center; */
+  justify-content: space-around;
+  grid-area: salon-fama; }
+
+.productos img {
+  width: 100px; }
+
+.top10productos img {
+  transition: all 0.3s ease-in-out; }
+
+/* efecto de crecimiento  */
+.top10productos img:hover {
+  transform: scale(1.7); }
+
+.top10categorias {
+  transition: all 0.3s ease-in-out;
+  background-color: #fff; }
+
+/* efecto de crecimiento  */
+.top10categorias:hover {
+  background-color: #2e2e2e;
+  color: #fff;
+  transform: scale(1.4) translate(0, -50%); }
+
+.categorias img {
+  width: 50px;
+  /* height: 100px; */ }
+
+.top10productos {
+  /* border: 2px solid rgb(216, 34, 34); */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  /* flex-wrap: wrap; */
+  /* background-color: #000; */
+  margin: 0.5rem; }
+
+.top10categorias {
+  border: 5px solid skyblue;
+  border-top-right-radius: 13px;
+  border-bottom-right-radius: 13px;
+  display: flex;
+  align-items: center;
+  margin: 5px; }
+
+.top10categorias h4 {
+  margin: 10px; }
+
+/* Datos del producto, primero los settings del cajon */
+.data-producto {
+  width: 14rem;
+  font-size: 14px;
+  overflow: hidden; }
+
+.data-producto h2 {
+  font-weight: bold;
+  color: forestgreen;
+  font-size: 21px; }
+
+/* .data-producto .sku {
+    font-size: 10px;
+  } */
+.data-producto span {
+  color: forestgreen;
+  font-weight: bold; }
+
+.data-producto .precio {
+  font-size: 16px; }
+
+.formulario {
+  background-color: #ffffff;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  box-shadow: 7px 13px 25px #000001;
+  grid-area: formulario; }
+
+.contact {
+  padding: 0.8rem;
+  overflow: hidden;
+  color: gray; }
+
+.contact label,
+.contact input,
+.contact textarea {
+  display: block;
+  width: 100%;
+  margin-bottom: 8px; }
+
+.contact label {
+  font-weight: 700px;
+  text-align: left; }
+
+.contact input:not([type="submit"]),
+.contact textarea {
+  border: none;
+  border-bottom: 2px solid #008e97;
+  margin-bottom: 10px;
+  font-size: 20px;
+  outline: none; }
+
+.contact input[type="submit"] {
+  padding: 10px;
+  border: none;
+  background-color: #008e97;
+  color: white;
+  font-size: 20px;
+  cursor: pointer; }
+
+.gmap {
+  width: 600px; }
+
+.mapa {
+  width: 100%;
+  grid-area: mapa; }
+
+.direccion {
+  /* box-shadow: 7px 13px 25px rgb(0, 0, 0, 0.8); */
+  color: #008e97;
+  font-size: 18px;
+  font-weight: 800;
+  text-align: center;
+  width: 600px;
+  grid-area: direccion; }
+
+.pregunta {
+  /* background-color: #000; */
+  /* border: 2px solid fuchsia; */
+  /* color: whitesmoke; */
+  text-align: left;
+  margin: 20px; }
+
+.segunda {
+  margin-top: 2rem;
+  grid-area: segunda; }
+
+.tercera {
+  margin-top: 2rem;
+  grid-area: tercera; }
+
+.cuarta {
+  /* background-color: #000; */
+  margin-top: 2rem;
+  z-index: 0;
+  grid-area: cuarta; }
+
+.carousel img {
+  max-height: 40vh;
+  /* min-width: auto; */ }
+
+/* las tarjetas de nosotros */
+.cards {
+  width: 17rem;
+  /* margin: 10px; */
+  overflow: hidden;
+  position: relative;
+  border-radius: 15px;
+  box-shadow: 7px 13px 37px #000001; }
+
+.cards h2 {
+  font-size: 30px; }
+
+.cards .cardTop {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+  background-color: #222121; }
+
+/* el efecto diagonal bajo la imagen */
+.cards .cardTop::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100px;
+  border-top: 30px solid transparent;
+  border-left: 400px solid white;
+  bottom: 0; }
+
+.cards .cardTop img {
+  /* width: 100%; */
+  height: 199px; }
+
+.cards .cardInfo {
+  padding: 10px;
+  overflow: hidden;
+  text-align: center; }
+
+.cards .cardInfo h2 {
+  margin: 0.5em 0; }
+
+.cards .cardInfo p {
+  margin: 1em 0; }
+
+.cards ul li {
+  list-style: none;
+  display: inline-block;
+  margin: 0.5em 0.2em; }
+
+.cards ul li a {
+  text-decoration: none;
+  color: white;
+  background: #2e2e2e;
+  width: 30px;
+  height: 30px;
+  line-height: 30px !important;
+  /* esto lo hara circular ya que la altura y el ancho son iguales */
+  border-radius: 50%;
+  /* velocidad del efecto en redes */
+  transition: all 0.3s ease-in-out; }
+
+/* efecto de crecimiento a redes sociales */
+.cards ul li a:hover {
+  transform: scale(1.4); }
+
+.cards .cardBottom {
+  width: 100%;
+  height: 80px;
+  background: #222121;
+  position: relative; }
+
+/* el efecto diagonal encima del cardBottom */
+.cards .cardBottom::before {
+  content: "";
+  position: relative;
+  width: 100px;
+  border-bottom: 30px solid transparent;
+  border-right: 400px solid white;
+  top: -3px; }
+
+/* declaramos el grid-area que ocuparan las cards y el lema */
+.card1 {
+  grid-area: card1; }
+
+.card2 {
+  grid-area: card2; }
+
+.card3 {
+  grid-area: card3; }
+
+.lema {
+  margin: 1rem;
+  padding: 0.5rem;
+  grid-area: lema; }
+
+footer a {
+  color: white; }
+
+/* Aqui iran los @medias */
+/* pantallas mayores a 770px */
+@media screen and (min-width: 770px) {
+  .menu li:hover ul {
+    display: block;
+    background-color: #008e97; } }
+
+/* pantallas medianas tablets 768px */
+@media screen and (max-width: 770px) {
+  .header {
+    flex-direction: column;
+    align-items: center; }
+  .header img {
+    margin: 1px;
+    /* width: 100px; */ }
+  .header h1 {
+    display: none; }
+  .contacto {
+    grid-template-areas: "bienvenida bienvenida bienvenida" "formulario formulario formulario" "direccion direccion direccion" "mapa mapa mapa"; }
+  .nosotros {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "bienvenida bienvenida" "card1 card2 " "card3 card4 " "lema lema"; }
+  .direccion {
+    padding: 2rem;
+    text-align: center;
+    grid-area: direccion; }
+  /* pantallas pequeñas 480px */ }
+
+@media screen and (max-width: 770px) and (max-width: 565px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+    /* width:auto; */ }
+  .header img {
+    margin: 1px;
+    /* width: 100px; */ }
+  .header h1 {
+    display: none; }
+  .header h2 {
+    font-size: 1rem; }
+  /* nav {
+        esto lo dejo para cuando sepamos como poner el menu
+        display: none;
+      } */
+  main h2 {
+    font-size: 1.5rem; }
+  main h3 {
+    font-size: 0.57em; }
+  .menu li {
+    display: block;
+    font-size: 0.8rem; }
+  .imgContacto {
+    left: 80%; }
+  .contacto {
+    grid-template-areas: "bienvenida bienvenida bienvenida" "formulario formulario formulario" "direccion direccion direccion" "mapa mapa mapa"; }
+  .gmap {
+    width: 250px;
+    height: 200px; }
+  .direccion {
+    padding: 2rem;
+    text-align: center;
+    width: 250px;
+    grid-area: direccion; }
+  .nosotros {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "bienvenida bienvenida bienvenida" "card1 card1 card1" "card2 card2 card2" "card3 card3 card3" "lema lema lema"; }
+  .cards {
+    transform: scale(0.8); } }
+
+@media screen and (max-width: 770px) {
+  .lema {
+    font-size: 21px; }
+  .pregunta {
+    font-stretch: 20%; }
+  footer {
+    font-stretch: 50%; } }
+
+/* nav {
+    esto lo dejo para cuando sepamos como poner el menu
+    display: none;
+  } */
