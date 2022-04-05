@@ -476,6 +476,10 @@ footer a {
   color: white;
 }
 
+.panel-color{
+  background-color: $color--verdeObscuro;
+}
+
 /* Aqui iran los @medias */
 /* pantallas mayores a 770px */
 @media screen and (min-width: 770px) {
