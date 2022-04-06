@@ -383,6 +383,15 @@ main h3 {
 footer a {
   color: white; }
 
+.E404 h1, .E404 h2 {
+  font-size: 8vh; }
+
+.E404 .p1 {
+  font-size: 6vh; }
+
+.E404 .p2 {
+  font-size: 3vh; }
+
 /* Aqui iran los @medias */
 /* pantallas mayores a 770px */
 @media screen and (min-width: 770px) {
