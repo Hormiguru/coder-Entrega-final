@@ -73,6 +73,7 @@ $contactos: (
 body {
   background: $fondo;
   font-family: $typo--regular;
+  // overflow: hidden;
 }
 h1 {
   font-family: $typo--serifa;
@@ -232,18 +233,24 @@ main h3 {
   justify-content: space-around;
   grid-area: salon-fama;
 }
-.productos img {
+.productos {
+  img {
   width: 100px;
+  }
+  a{
+    text-decoration: none;
+    color: $color--cafeObscuro;
+  }
 }
 
 
 
 .categorias{
   padding-top: 15px;
- img {
-  width: 50px;
-  /* height: 100px; */
-}
+  a{
+    text-decoration: none;
+    color: $color--cafeObscuro;
+  }
 }
 .top10productos {
   display: flex;
@@ -274,6 +281,15 @@ main h3 {
     background-color: $color--cafeObscuro;
     color:$color--verdeClaro;
     transform: scale(1.1) translate(0, -10%);}
+}
+.categoria__papel{
+  @extend .top10productos ;
+}
+.categoria__info {
+  @extend .salon-fama;
+}
+.seccion_categoria{
+  @extend .segunda
 }
 /* Datos del producto, primero los settings del cajon */
 .data-producto {
@@ -561,6 +577,7 @@ p{
     padding-left: 5rem;
     padding-right: 5rem;
   }
+}
 
   /* pantallas pequeñas 480px */
   @media screen and (max-width: 565px) {
@@ -579,10 +596,6 @@ p{
     .header h2 {
       font-size: 1rem;
     }
-    /* nav {
-        esto lo dejo para cuando sepamos como poner el menu
-        display: none;
-      } */
 
     main h2 {
       font-size: 1.5rem;
@@ -632,19 +645,13 @@ p{
       padding-left: 0rem;
       padding-right: 0rem;
     }
-  }
   .lema {
     font-size: 21px;
   }
   .pregunta {
     font-stretch: 20%;
   }
-  footer {
-    font-stretch: 50%;
+  .footer {
+    font-size: 10px;
   }
-
 }
-/* nav {
-    esto lo dejo para cuando sepamos como poner el menu
-    display: none;
-  } */

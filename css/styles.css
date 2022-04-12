@@ -151,7 +151,7 @@ main h3 {
   overflow: hidden;
   grid-area: bienvenida; }
 
-.salon-fama {
+.salon-fama, .categoria__info {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -160,20 +160,24 @@ main h3 {
 .productos img {
   width: 100px; }
 
+.productos a {
+  text-decoration: none;
+  color: #534340; }
+
 .categorias {
   padding-top: 15px; }
-  .categorias img {
-    width: 50px;
-    /* height: 100px; */ }
+  .categorias a {
+    text-decoration: none;
+    color: #534340; }
 
-.top10productos {
+.top10productos, .categoria__papel {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   margin: 0.5rem;
   transition: all 0.3s ease-in-out; }
-  .top10productos:hover {
+  .top10productos:hover, .categoria__papel:hover {
     transform: scale(1.1); }
 
 .top10categorias {
@@ -268,7 +272,7 @@ main h3 {
   text-align: left;
   margin: 20px; }
 
-.segunda {
+.segunda, .seccion_categoria {
   margin-top: 2rem;
   grid-area: segunda; }
 
@@ -435,10 +439,10 @@ p {
     grid-area: direccion; }
   .tercera {
     padding-left: 5rem;
-    padding-right: 5rem; }
-  /* pantallas pequeñas 480px */ }
+    padding-right: 5rem; } }
 
-@media screen and (max-width: 770px) and (max-width: 565px) {
+/* pantallas pequeñas 480px */
+@media screen and (max-width: 565px) {
   .header {
     flex-direction: column;
     align-items: center;
@@ -450,10 +454,6 @@ p {
     display: none; }
   .header h2 {
     font-size: 1rem; }
-  /* nav {
-        esto lo dejo para cuando sepamos como poner el menu
-        display: none;
-      } */
   main h2 {
     font-size: 1.5rem; }
   main h3 {
@@ -480,17 +480,10 @@ p {
     transform: scale(0.8); }
   .tercera {
     padding-left: 0rem;
-    padding-right: 0rem; } }
-
-@media screen and (max-width: 770px) {
+    padding-right: 0rem; }
   .lema {
     font-size: 21px; }
   .pregunta {
     font-stretch: 20%; }
-  footer {
-    font-stretch: 50%; } }
-
-/* nav {
-    esto lo dejo para cuando sepamos como poner el menu
-    display: none;
-  } */
+  .footer {
+    font-size: 10px; } }
