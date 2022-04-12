@@ -493,6 +493,7 @@ main h3 {
   border: 2px solid $color--verdeObscuro;
   border-bottom-right-radius: 15px;
   border-bottom-left-radius: 15px;
+  overflow:hidden;
 }
 p{
   margin: 0;
@@ -513,10 +514,6 @@ p{
   .p2 {
     font-size: 3vh;
   }
-}
-
-.panel-color{
-  background-color: $color--verdeObscuro;
 }
 
 /* Aqui iran los @medias */

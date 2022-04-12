@@ -387,7 +387,8 @@ main h3 {
 .accordion-body {
   border: 2px solid #9dc45b;
   border-bottom-right-radius: 15px;
-  border-bottom-left-radius: 15px; }
+  border-bottom-left-radius: 15px;
+  overflow: hidden; }
 
 p {
   margin: 0; }
@@ -405,9 +406,6 @@ p {
 
 .E404 .p2 {
   font-size: 3vh; }
-
-.panel-color {
-  background-color: #9dc45b; }
 
 /* Aqui iran los @medias */
 /* pantallas mayores a 770px */
