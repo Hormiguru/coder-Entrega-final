@@ -1,4 +1,10 @@
 @charset "UTF-8";
+/* Reseteamos los margenes */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
 /* newStyles */
 /* Tipos de letra que ocuparemos */
 .btn--twitter {
@@ -16,12 +22,6 @@
 .btn--youtube {
   background: #ff0000;
   color: #ffffff; }
-
-/* Reseteamos los margenes */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box; }
 
 body {
   background: #534340;
@@ -42,11 +42,10 @@ h2 {
   z-index: 1; }
 
 .contenedor {
-  background: #F4FCD9;
-  padding: 20px;
-  margin: 20px auto;
+  background: #f4fcd9;
+  padding: 10px;
+  margin: 10px auto;
   width: 90%;
-  display: grid;
   gap: 1rem;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, auto);
@@ -54,7 +53,7 @@ h2 {
 
 .header {
   background-color: #534340;
-  color: #C5D8A4;
+  color: #9dc45b;
   border-radius: 4px;
   display: flex;
   flex-wrap: wrap;
@@ -108,16 +107,17 @@ main h3 {
 /* ajustes del footer */
 .footer {
   background-color: #534340;
-  color: #C5D8A4;
+  color: #9dc45b;
   border-radius: 4px;
-  padding: 1rem;
-  margin: 5px;
+  padding-top: 1rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
   margin-top: 1rem;
   grid-area: footer; }
+  .footer a {
+    color: white; }
 
 .contenido {
-  /* background-color: #008e97; */
-  padding: 20px;
   border-radius: 4px;
   line-height: 1.5;
   text-align: center;
@@ -152,78 +152,63 @@ main h3 {
   grid-area: bienvenida; }
 
 .salon-fama {
-  /* border: 2px solid black; */
   display: flex;
   flex-wrap: wrap;
-  /* justify-content: center; */
   justify-content: space-around;
   grid-area: salon-fama; }
 
 .productos img {
   width: 100px; }
 
-.top10productos img {
-  transition: all 0.3s ease-in-out; }
-
-/* efecto de crecimiento  */
-.top10productos img:hover {
-  transform: scale(1.7); }
-
-.top10categorias {
-  transition: all 0.3s ease-in-out;
-  background-color: #fff; }
-
-/* efecto de crecimiento  */
-.top10categorias:hover {
-  background-color: #2e2e2e;
-  color: #fff;
-  transform: scale(1.4) translate(0, -50%); }
-
-.categorias img {
-  width: 50px;
-  /* height: 100px; */ }
+.categorias {
+  padding-top: 15px; }
+  .categorias img {
+    width: 50px;
+    /* height: 100px; */ }
 
 .top10productos {
-  /* border: 2px solid rgb(216, 34, 34); */
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  /* flex-wrap: wrap; */
-  /* background-color: #000; */
-  margin: 0.5rem; }
+  margin: 0.5rem;
+  transition: all 0.3s ease-in-out; }
+  .top10productos:hover {
+    transform: scale(1.1); }
 
 .top10categorias {
-  border: 5px solid skyblue;
+  border: 1px none #bb9981;
   border-top-right-radius: 13px;
   border-bottom-right-radius: 13px;
   display: flex;
+  width: 100px;
+  height: 30px;
+  padding: 5px;
   align-items: center;
-  margin: 5px; }
-
-.top10categorias h4 {
-  margin: 10px; }
+  transition: all 0.3s ease-in-out;
+  background-color: #f4fcd9; }
+  .top10categorias h4 {
+    margin: 3px;
+    font-size: 16px; }
+  .top10categorias:hover {
+    background-color: #534340;
+    color: #f4fcd9;
+    transform: scale(1.1) translate(0, -10%); }
 
 /* Datos del producto, primero los settings del cajon */
 .data-producto {
   width: 14rem;
   font-size: 14px;
   overflow: hidden; }
-
-.data-producto h2 {
-  font-weight: bold;
-  color: forestgreen;
-  font-size: 21px; }
-
-/* .data-producto .sku {
-    font-size: 10px;
-  } */
-.data-producto span {
-  color: forestgreen;
-  font-weight: bold; }
-
-.data-producto .precio {
-  font-size: 16px; }
+  .data-producto h2 {
+    font-weight: bold;
+    color: #9dc45b;
+    font-size: 21px; }
+  .data-producto span {
+    color: #534340;
+    font-weight: bold; }
+  .data-producto .precio {
+    font-size: 16px; }
 
 .formulario {
   background-color: #ffffff;
@@ -272,8 +257,7 @@ main h3 {
   grid-area: mapa; }
 
 .direccion {
-  /* box-shadow: 7px 13px 25px rgb(0, 0, 0, 0.8); */
-  color: #008e97;
+  color: #534340;
   font-size: 18px;
   font-weight: 800;
   text-align: center;
@@ -281,9 +265,6 @@ main h3 {
   grid-area: direccion; }
 
 .pregunta {
-  /* background-color: #000; */
-  /* border: 2px solid fuchsia; */
-  /* color: whitesmoke; */
   text-align: left;
   margin: 20px; }
 
@@ -293,10 +274,11 @@ main h3 {
 
 .tercera {
   margin-top: 2rem;
+  padding-left: 15rem;
+  padding-right: 15rem;
   grid-area: tercera; }
 
 .cuarta {
-  /* background-color: #000; */
   margin-top: 2rem;
   z-index: 0;
   grid-area: cuarta; }
@@ -304,7 +286,6 @@ main h3 {
 /* las tarjetas de nosotros */
 .cards {
   width: 17rem;
-  /* margin: 10px; */
   overflow: hidden;
   position: relative;
   border-radius: 15px;
@@ -327,7 +308,6 @@ main h3 {
       border-left: 400px solid white;
       bottom: 0; }
     .cards .cardTop img {
-      /* width: 100%; */
       height: 199px; }
   .cards .cardInfo {
     padding: 10px;
@@ -363,7 +343,7 @@ main h3 {
       width: 100px;
       border-bottom: 30px solid transparent;
       border-right: 400px solid white;
-      top: -3px; }
+      top: -4px; }
 
 /* declaramos el grid-area que ocuparan las cards y el lema */
 .card1 {
@@ -380,8 +360,42 @@ main h3 {
   padding: 0.5rem;
   grid-area: lema; }
 
-footer a {
-  color: white; }
+.boton1 {
+  width: 95%;
+  font-size: 30px;
+  padding: 8px 0;
+  border: 2px solid #bb9981;
+  border-radius: 10px;
+  color: #534340;
+  background-color: #9dc45b; }
+  .boton1:hover {
+    color: #9dc45b;
+    background-color: #534340; }
+
+.borde-uno {
+  border: 5px outset #bb9981;
+  border-radius: 20px; }
+
+.accordion-button:focus {
+  box-shadow: inset 0 -1px 0 #a5a1a1; }
+
+.accordion-button:not(.collapsed) {
+  color: #534340;
+  background-color: #9dc45b;
+  box-shadow: inset 0 -1px 0 #a5a1a1; }
+
+.accordion-body {
+  border: 2px solid #9dc45b;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px; }
+
+p {
+  margin: 0; }
+
+.copyright {
+  color: #bb9981;
+  text-align: center;
+  font-size: 8px; }
 
 .E404 h1, .E404 h2 {
   font-size: 8vh; }
@@ -418,6 +432,9 @@ footer a {
     padding: 2rem;
     text-align: center;
     grid-area: direccion; }
+  .tercera {
+    padding-left: 5rem;
+    padding-right: 5rem; }
   /* pantallas pequeñas 480px */ }
 
 @media screen and (max-width: 770px) and (max-width: 565px) {
@@ -459,7 +476,10 @@ footer a {
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas: "bienvenida bienvenida bienvenida" "card1 card1 card1" "card2 card2 card2" "card3 card3 card3" "lema lema lema"; }
   .cards {
-    transform: scale(0.8); } }
+    transform: scale(0.8); }
+  .tercera {
+    padding-left: 0rem;
+    padding-right: 0rem; } }
 
 @media screen and (max-width: 770px) {
   .lema {
