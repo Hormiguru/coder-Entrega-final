@@ -244,6 +244,10 @@ main h3 {
     }
   }
 }
+
+.table-hover tbody tr:hover td {
+  background: $color--verdeClaro;
+}
 .bienvenida {
   text-align: center;
   overflow: hidden;
