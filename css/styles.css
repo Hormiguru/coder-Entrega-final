@@ -146,6 +146,24 @@ main h3 {
   grid-template-rows: repeat(3, auto);
   grid-template-areas: "bienvenida bienvenida bienvenida" "card1 card2 card3" "lema lema lema"; }
 
+.fichas .sku {
+  font-size: 10px; }
+
+.fichas .precio {
+  font-size: 28px; }
+  .fichas .precio span {
+    color: #9dc45b; }
+
+.fichas .table .tipo {
+  width: 25%;
+  font-family: "Merriweather", serif;
+  font-weight: bold; }
+
+.fichas .table .info {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: normal;
+  padding-left: 1rem; }
+
 .bienvenida {
   text-align: center;
   overflow: hidden;
@@ -486,4 +504,8 @@ p {
   .pregunta {
     font-stretch: 20%; }
   .footer {
-    font-size: 10px; } }
+    font-size: 10px; }
+  .fichas .table .tipo {
+    font-size: 14px; }
+  .fichas .table .info {
+    font-size: 14px; } }
